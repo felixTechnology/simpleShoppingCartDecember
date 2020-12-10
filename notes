@@ -1,0 +1,42 @@
+1. Create your Project Folder
+2. Create your index.html file
+3. Open your HTML TAG
+4. Go to (bootstrapcdn.com/fontawesome)
+- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+-Copy this link and paste in the html <head></head>
+-
+5. Create the main div class (this will contain everything in the body tag)
+   - create header tag (with an Id= "header" & class = "header")
+     . within the header tag (<header></header>), we need a (h1 tag, <h1></h1>)
+     . within the header tag and below the (<h1></h1>) , create another div tag to contain the fontawesome icon
+
+     <body>
+
+
+              <div class="main">
+                   <header id="header" class="header">
+
+                       <h1>Shopping Cart</h1>
+                       <div class="iconShopping">
+                             <i class="fa fa-shopping-cart"></i>
+                       </div>
+
+                   </header>
+              </div>
+
+
+     </body>
+ 6. Now, create CSS File (index.css)
+  - create a general setting to control the main page
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+  }
+
+    - create main as (absolute)
+    - height (10vh)
+    - width (100%)
+    - display: flex
+
