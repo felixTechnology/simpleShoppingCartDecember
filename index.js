@@ -1,5 +1,5 @@
 window.onload = function () {
-   // alert('javascript is working')
+    // alert('javascript is working')
 
     //1.creating variables for cart Box
     const iconShopping = document.querySelector('.iconShopping');/*1*/
@@ -7,9 +7,9 @@ window.onload = function () {
     const cartBox = document.querySelector('.cartBox'); /*2*/
 
 
-  /*  iconShopping.onclick = function () { //1i
-        alert('Shopping Cart is Clicked');
-    }*/ /*OR below*/
+    /*  iconShopping.onclick = function () { //1i
+          alert('Shopping Cart is Clicked');
+      }*/ /*OR below*/
 
     iconShopping.addEventListener("click", function () { /*1ii*/
         //alert('shopping cart is clicked'); //1iii
@@ -22,49 +22,43 @@ window.onload = function () {
     })
 
     //LocalStorage
-    if (typeof(Storage) !== 'undefined'){
-              //console.log('Our Storage is working');
-              //setting item in the local storage
-               const array = ['a','b','c','d'];
-               /*const object = {
-                                 name: 'Felix Atsu Kofi Ackuayi',
-                                 channelName: "Amalitech web Training",
-                                  address: {
-                                     houseNo: '257'
-                                  }
-                               }*/
+    //adding data to localStorage
+     const addToCartBtn = document.getElementsByClassName('addToCart');
+      let items =[];
+     // console.log(addToCartBtn.length);
+      for (let i=0; i<addToCartBtn.length; i++ ){
 
-        /*const objects = [
-            {
-                name: 'Felix Atsu Kofi Ackuayi',
-                channelName: "Amalitech web Training",
-                address: {
-                    houseNo: '257'
-                }
-            },
-            {
-                name: 'Eric Doe  Ackuayi',
-                channelName: "Goldfields Ghana Training",
-                address: {
-                    houseNo: '300'
-                },
-            }
-        ]*/
-             /*localStorage.setItem('localstoragedemo','Ghana is good');*/
-             localStorage.setItem('localstoragedemo', array);
-              /* localStorage.setItem('localstoragedemo', JSON.stringify(object));*/
-                //localStorage.setItem('localstoragedemo', JSON.stringify(objects));
+             addToCartBtn[i].addEventListener("click", function (e) {
+                        //console.log(e);
+                        //console.log(i + " " + e.target);
+                         //console.log(i+1);
+                 //console.log(e.target);
+                 //console.log(e.target.parentElement);
+                 //console.log(e.target.parentElement.children);
+                 //console.log( e.target.parentElement.children[0])
+                 console.log( e.target.parentElement.children[0].textContent);
+                 if (typeof(Storage) !== 'undefined'){
 
-        //get data from local Storage
-        const data = localStorage.getItem('localstoragedemo');
-        //console.log(data)
-        console.log(data[3])
+                     //localStorage.removeItem("localstoragedemo")
 
-        /*console.log(JSON.parse(data))*/
-        /*console.log(JSON.parse(data)[1])*/
-        //console.log(JSON.parse(data)[1].address)
+                     let item = {
+                           id: i + 1,
+                           name: e.target.parentElement.children[0],
+                     }
+                 }else
+                 {
+                     console.log('Storage is not working')
+                 }
+
+              });
+      }
+
+   /* if (typeof(Storage) !== 'undefined'){
+
+
+        localStorage.removeItem("localstoragedemo")
     }else
     {
         console.log('Storage is not working')
-    }
+    }*/
 }
