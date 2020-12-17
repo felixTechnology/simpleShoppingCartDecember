@@ -31,8 +31,9 @@
 .main header .iconShopping{
     cursor: pointer;
     z-index: 1;
-    position: relative;
+    position: absolute;
     font-size: 1.8rem;
+    right: 100px;
 }
 
 
