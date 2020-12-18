@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b7919e-35f0-4394-b2f9-8f647ae11469" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/indexTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/indexTest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607618558175</updated>
       <workItem from="1607618559302" duration="9853000" />
-      <workItem from="1608132007968" duration="24558000" />
+      <workItem from="1608132007968" duration="39799000" />
     </task>
     <servers />
   </component>
@@ -69,7 +68,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/indexTest.js</url>
-          <line>13</line>
+          <line>14</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>

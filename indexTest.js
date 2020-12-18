@@ -7,6 +7,7 @@ window.onload = function () {
     const cartBox = document.querySelector('.cartBox'); /*2*/
 
 
+
   /*  iconShopping.onclick = function () { //1i
         alert('Shopping Cart is Clicked');
     }*/ /*OR below*/
