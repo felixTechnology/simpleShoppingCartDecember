@@ -28,7 +28,7 @@ window.onload = function () {
 
       let items =[]; //global array for items to be kept in localStorage
       // console.log(addToCartBtn.length);//this will give you total number of loop to expect.
-      for (let i=0; i<addToCartBtn.length; i++ ){
+      for (let i=0; i < addToCartBtn.length; i++ ){
 
              addToCartBtn[i].addEventListener("click", function (e) { //addToCartBtn, will give us the button details per their Indexes,when
                                                                                         //clicked on each item button
@@ -50,8 +50,8 @@ window.onload = function () {
                            name: e.target.parentElement.children[0].textContent,// when you click on an element, we getting to the parent element,and further move to its 1st child.The position of the 1st child is the [0]
                            price: e.target.parentElement.children[1].children[0].textContent,
                            //no:1 //by default the number begins with 1
-                         no: 1
-                     }
+                            no: 1
+                     };
 
                      //Adding the items into a local storage whenever we click on an item.
                      //Note this line of code will only add one item  to localstorage even if you click on multiple items.
@@ -69,12 +69,13 @@ window.onload = function () {
 
                          items.push(item);//we pushing the object into an array and afterwards set it as a SetItem as immediate below.
                          localStorage.setItem('items',JSON.stringify(items)); //with this condition when you click on other items it will alert that there's an item present
+                          window.location.reload();
                      }
                      else{
 
                          const localItems = JSON.parse(localStorage.getItem("items"));
                          //console.log(localItems);
-                         window.location.reload();
+                         //window.location.reload();
                          localItems.map(data =>{ //map will group all the items in the localStorage
                                //console.log(data);
                              if (item.id === data.id){ //variable item is an object so we accessing it ID as declared in the object details above.
@@ -88,7 +89,7 @@ window.onload = function () {
                                  items.push(data);
                              }
                          });
-                         //items.push(item);
+                         items.push(item);
                          localStorage.setItem('items',JSON.stringify(items));
                          window.location.reload();
 
@@ -104,13 +105,31 @@ window.onload = function () {
 
     //Adding data to shopping cart
 
-     const iconShoppingP = document.querySelector('.iconShopping p');
-      let no = 0;
+    const iconShoppingP = document.querySelector('.iconShopping p');
+      let no = 0
       JSON.parse(localStorage.getItem('items')).map(data=>{
           no = no + data.no;
 
       });
-      iconShopping.innerHTML = no;
+      iconShoppingP.innerHTML = no;
+
+
+      //Adding cartbox data in a table
+
+       const cardBoxTable = cartBox.querySelector('table')
+       //console.log(cardBoxTable);
+
+        //Creating an array string for the data in a Table
+        let tableData = '';
+        tableData += '<tr><th>S no.</th><th>Item Name</th><th>Item No:</th><th>Item Price:</th><th></th>';
+        if (JSON.parse(localStorage.getItem('items')) === null){
+            tableData += '<tr><td colspan="5">No items found</td></tr>'
+        }else {
+
+        }
+        cardBoxTable.innerHTML = tableData;
+
+
 
    /* if (typeof(Storage) !== 'undefined'){
 
